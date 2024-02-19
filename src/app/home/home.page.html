@@ -1,38 +1,36 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-button >
+      <ion-button>
         <ion-icon slot="icon-only" name="logo-ionic"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>
-     Photo
-    </ion-title>
+    <ion-title> Ionic Camera Plugin </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <ion-button expand="block" color="primary" (click)="addPhotoToGallery()">
+    <ion-icon slot="start" name="camera"></ion-icon>
+    Prendre une photo
+  </ion-button>
 
+  <ion-button expand="block" color="secondary" (click)="startRecording()">
+    <ion-icon name="videocam-outline"></ion-icon>
+    Prendre une video
+  </ion-button>
 
-    <ion-button expand="block" color="tertiary">
-      <ion-icon slot="start" name="image"></ion-icon>
-      Ouvrir la bibliothèque
-    </ion-button>
+  <ion-button expand="block" color="tertiary">
+    <ion-icon slot="start" name="image"></ion-icon>
+    Ouvrir la bibliothèque
+  </ion-button>
 
-    <ion-button expand="block" color="secondary" (click)="addPhotoToGallery()">
-      <ion-icon slot="start" name="camera"></ion-icon>
-      Prendre une photo
-    </ion-button>
+  <div class="flex">
+    <div class="img-box"></div>
+  </div>
 
-    <div class="flex">
-      <div class="img-box">
-      </div>
-    </div>
-
-    <ion-button expand="block" color="warning">
-      <ion-icon slot="start" name="cloud-upload"></ion-icon>
-      Envoyer la photo
-    </ion-button>
-
-
+  <ion-button expand="block" color="warning">
+    <ion-icon slot="start" name="cloud-upload"></ion-icon>
+    Envoyer la photo
+  </ion-button>
 </ion-content>
